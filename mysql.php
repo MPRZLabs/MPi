@@ -25,6 +25,14 @@
 	    }
 		
 		/**
+		 * shuts down the connection to the database
+		 */
+		 public function __destruct()
+		 {
+		 	mysql_close($this->link);
+		 }
+		
+		/**
 		 * opens the connection to the database
 		 */
 	    private function init()
