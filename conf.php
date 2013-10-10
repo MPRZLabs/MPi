@@ -12,9 +12,9 @@
 		// CHANGE STUFF HERE
 		$db = new DatabaseHandler("host", "user", "pass", "name");
   	}
-  	elseif (DATABASE_BACKEND == "sqlite")
+  	elseif (DATABASE_BACKEND == "sqlite3")
   	{
-    	require("sqlite.php");
+    	require("sqlite3.php");
 		$db = new DatabaseHandler("system.sqlite");
   	}
   	else
