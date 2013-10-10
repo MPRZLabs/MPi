@@ -1,3 +1,3 @@
 <?php
-  require("conf.php");
+  	require("conf.php");
 ?>
