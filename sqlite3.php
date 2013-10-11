@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * MySQL backend for database handling.
+	 * SQLite3 backend for database handling.
 	 */
   	class DatabaseHandler {
   		/**
@@ -27,6 +27,14 @@
 		public function __destruct()
 		{
 			$this->link->close();
+		}
+		
+		/**
+		 * performs an SQL query
+		 */
+		public function query($q)
+		{
+			return $this->link->query($q);
 		}
 		
 		/**
