@@ -4,10 +4,10 @@
 	 */
   	class DatabaseHandler {
   		/**
-		 * storing the database connection
+	 	 * storing the database connection
 		 */
     	protected $link;
-		/**
+		/**	
 		 * storing connection parameters
 		 */
     	private $host, $user, $pass, $name;
@@ -23,14 +23,22 @@
 	      	$this->name = $name;
 	      	$this->init();
 	    }
+	    
+	    /**
+	     * performs an SQL query
+	     */
+	    public function query($q)
+	    {
+	   		return mysql_query($q);
+	    }
 		
 		/**
 		 * shuts down the connection to the database
 		 */
-		 public function __destruct()
-		 {
-		 	mysql_close($this->link);
-		 }
+		public function __destruct()
+		{
+			mysql_close($this->link);
+		}
 		
 		/**
 		 * opens the connection to the database
